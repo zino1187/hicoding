@@ -17,6 +17,9 @@ img=Image.open("./images/sky.png")
 img=img.resize( (1460,800), Image.ANTIALIAS)
 img=ImageTk.PhotoImage(img)
 
+# 생성된 이미지를 켄버스에 그리자!!! x=0, y=0위치에 이미지 그리기
+canvas.create_image(0,0, image=img)
+
 #윈도우창의 크기를 원하는크기로 지정 
 win.geometry("1460x800") #가로(너비)x세로 (높이)
 

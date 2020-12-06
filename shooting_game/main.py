@@ -12,13 +12,20 @@ win=Tk() #윈도우 화면 호출
 # 켄버스를 만들고, 만들어진 켄버스를 canvas변수로 부르자!!
 canvas=Canvas(win, width=1460, height=800, bg="yellow")
 
+# 배경이미지
 img=Image.open("./images/sky.png")
 # 이미지 사이즈 원하는 크기로 재조정 
 img=img.resize( (1460,800), Image.ANTIALIAS)
 img=ImageTk.PhotoImage(img)
 
+# 주인공 이미지 
+hImg=Image.open("./images/plane.png")
+hImg=hImg.resize((100,60), Image.ANTIALIAS)
+hImg=ImageTk.PhotoImage(hImg)
+
 # 생성된 이미지를 켄버스에 그리자!!! x=0, y=0위치에 이미지 그리기
 canvas.create_image(0,0, image=img)
+canvas.create_image(100,50, image=hImg)
 
 #윈도우창의 크기를 원하는크기로 지정 
 win.geometry("1460x800") #가로(너비)x세로 (높이)

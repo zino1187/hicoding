@@ -12,5 +12,6 @@ canvas=Canvas(win, width=1460, height=800, bg="yellow")
 #윈도우창의 크기를 원하는크기로 지정 
 win.geometry("1460x800") #가로(너비)x세로 (높이)
 
-
+# 켄버스를 윈도우창에 부착!!
+canvas.pack() 
 win.mainloop() #윈도우창을 닫지않고, 계속 유지하자
